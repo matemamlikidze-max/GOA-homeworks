@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Un giorno in Italia 🇮🇹</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    background: #fffaf2;
+    color: #26352b;
+}
+
+nav {
+    background: #102c23;
+    padding: 18px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #f6c85f;
+}
+
+.hero {
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+    color: white;
+    background:
+    linear-gradient(90deg, #071c16e8, #071c1660, transparent),
+    url("https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1800&q=85");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 78px);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    line-height: 1.7;
+    max-width: 500px;
+}
+
+.flag {
+    color: #f5d76e;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 26px;
+    background: #168653;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #ce2b37;
+    transform: translateY(-3px);
+}
+
+.intro {
+    text-align: center;
+    padding: 55px 20px 25px;
+}
+
+.intro h2 {
+    font-size: 34px;
+    color: #168653;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    max-width: 1150px;
+    margin: 35px auto 70px;
+    padding: 0 22px;
+}
+
+.card {
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px #00000012;
+    transition: 0.35s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px #00000020;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card h2 {
+    color: #168653;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.card p {
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.card .time {
+    color: #ce2b37;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.opinion {
+    background: linear-gradient(135deg, #e5f5e9, #fff0e8);
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.opinion h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.opinion p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.9;
+}
+
+footer {
+    background: #102c23;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    line-height: 2;
+}
+
+footer span {
+    color: #f6c85f;
+}
+
+@media (max-width: 600px) {
+    nav {
+        gap: 14px;
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 50px 7%;
+        min-height: 400px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#home">🇮🇹 Home</a>
+    <a href="#mattina">La mattina</a>
+    <a href="#pomeriggio">Il pomeriggio</a>
+    <a href="#sera">La sera</a>
+    <a href="#opinione">La mia opinione</a>
+</nav>
+
+<header class="hero" id="home">
+    <div>
+        <h1>Un giorno<br>in <span class="flag">Italia</span> 🇮🇹</h1>
+        <p>
+            Oggi visito Roma e trascorro una giornata
+            bellissima in questa città meravigliosa!
+        </p>
+        <a class="button" href="#mattina">Iniziamo il viaggio →</a>
+    </div>
+</header>
+
+<section class="intro">
+    <h2>Benvenuti a Roma! ❤️</h2>
+    <p>
+        Oggi sono a Roma, la capitale dell'Italia.
+        Sono molto felice perché posso visitare questa
+        città meravigliosa. Roma è famosa per i suoi
+        monumenti antichi, le sue belle piazze e il suo
+        cibo delizioso. Voglio scoprire nuovi posti,
+        fare tante fotografie e trascorrere una giornata
+        indimenticabile con la mia famiglia.
+    </p>
+</section>
+
+<main class="cards">
+
+    <article class="card" id="mattina">
+        <img
+        src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=85"
+        alt="Caffè italiano">
+
+        <div class="card-content">
+            <p class="time">☀️ Ore 7:00</p>
+            <h2>La mattina</h2>
+            <p>
+                Mi sveglio alle sette del mattino e mi preparo
+                per iniziare la giornata. Faccio colazione
+                con un cappuccino e un cornetto, due prodotti
+                tipici della colazione italiana.
+            </p>
+            <p>
+                Dopo colazione, esco dall'hotel con la mia
+                famiglia e comincio a esplorare Roma.
+                Cammino per le strade, ammiro i bellissimi
+                edifici e faccio alcune fotografie.
+                Il tempo è bello e il sole splende.
+                Sono molto felice di essere qui!
+            </p>
+        </div>
+    </article>
+
+    <article class="card" id="pomeriggio">
+        <img
+        src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=85"
+        alt="Monumenti di Roma">
+
+        <div class="card-content">
+            <p class="time">🏛️ Ore 12:00</p>
+            <h2>Il pomeriggio</h2>
+            <p>
+                A mezzogiorno visito il Colosseo, uno dei
+                monumenti più famosi di Roma. È molto grande
+                e interessante. Imparo qualcosa sulla storia
+                della città e scatto tante fotografie.
+            </p>
+            <p>
+                Dopo la visita, vado in un ristorante
+                italiano con la mia famiglia. A pranzo
+                mangio una pizza margherita e bevo dell'acqua.
+                La pizza è calda e molto buona!
+            </p>
+            <p>
+                Nel pomeriggio continuo a passeggiare
+                per il centro. Vedo belle piazze, fontane
+                e negozi. Compro anche un piccolo souvenir
+                per ricordare questa giornata speciale.
+                Mi diverto molto e sono contento di visitare
+                una città così bella.
+            </p>
+        </div>
+    </article>
+
+    <article class="card" id="sera">
+        <img
+        src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=85"
+        alt="Una bella città italiana">
+
+        <div class="card-content">
+            <p class="time">🌙 Ore 19:00</p>
+            <h2>La sera</h2>
+            <p>
+                La sera passeggio con la mia famiglia
+                e guardo le luci della città.
+                Il cielo è bellissimo e le strade
+                sono piene di persone.
+            </p>
+            <p>
+                Poi entriamo in una gelateria e scelgo
+                un gelato al cioccolato. È davvero delizioso!
+                Ci sediamo per qualche minuto e ci godiamo
+                la bella atmosfera di Roma.
+            </p>
+            <p>
+                Dopo una lunga giornata, torniamo in hotel.
+                Sono un po' stanco, ma molto felice.
+                Ho visto monumenti famosi, mangiato cibo
+                buonissimo e trascorso momenti speciali
+                con la mia famiglia. Alle dieci vado
+                a dormire e penso a tutte le cose belle
+                che ho fatto durante il giorno.
+            </p>
+        </div>
+    </article>
+
+</main>
+
+<section class="opinion" id="opinione">
+    <h2>❤️ La mia opinione</h2>
+    <p>
+        Oggi ho trascorso una giornata meravigliosa
+        a Roma. Mi è piaciuto visitare il Colosseo,
+        passeggiare per le strade e assaggiare la pizza
+        e il gelato italiani.
+        Roma è una città ricca di storia, cultura
+        e luoghi bellissimi. Questa esperienza
+        mi ha reso molto felice.
+        In futuro vorrei visitare anche Venezia
+        e Firenze, perché sono città famose e interessanti.
+        Spero di tornare in Italia un giorno.
+        È stata una giornata davvero indimenticabile!
+    </p>
+    <a href="#home" class="button">Torna all'inizio ↑</a>
+</section>
+
+<footer>
+    <h2>🇮🇹 Grazie per aver visitato il mio sito!</h2>
+    <p>Un giorno indimenticabile a Roma <span>♥</span></p>
+    <p>Creato con amore per l'Italia</p>
+</footer>
+
+</body>
+</html>
